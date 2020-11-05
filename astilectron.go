@@ -440,5 +440,5 @@ func (a *Astilectron) NewTray(o *TrayOptions) *Tray {
 
 // NewNotification creates a new notification
 func (a *Astilectron) NewNotification(o *NotificationOptions) *Notification {
-	return newNotification(a.worker.Context(), o, a.supported != nil && a.supported.Notification != nil && *a.supported.Notification, a.dispatcher, a.identifier, a.writer)
+	return newNotification(a.worker.Context(), o, true, a.dispatcher, a.identifier, a.writer)
 }
